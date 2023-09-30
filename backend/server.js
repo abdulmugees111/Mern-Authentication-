@@ -7,7 +7,7 @@ import cookieParser from 'cookie-parser';
 import { notFound, errorHandler } from './middleware/errorMiddleware.js';
 import userRoutes from './routes/userRoutes.js';
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 5005;
 
 connectDB();
 
@@ -19,7 +19,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 app.use('/api/users', userRoutes);
-
 if (process.env.NODE_ENV === 'production') {
   const __dirname = path.resolve();
   app.use(express.static(path.join(__dirname, '/frontend/dist')));
@@ -32,7 +31,6 @@ if (process.env.NODE_ENV === 'production') {
     res.send('API is running....');
   });
 }
-
 app.use(notFound);
 app.use(errorHandler);
 

@@ -6,7 +6,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { useLogoutMutation } from '../slices/usersApiSlice';
 import { logout } from '../slices/authSlice';
-
+import '../../src/index.css'
 const Header = () => {
   const { userInfo } = useSelector((state) => state.auth);
 
@@ -28,7 +28,7 @@ const Header = () => {
   return (
     <header>
       <Navbar bg='dark' variant='dark' expand='lg' collapseOnSelect>
-        <Container>
+        <Container className="con-bg-color">
           <LinkContainer to='/'>
             <Navbar.Brand>MERN Auth</Navbar.Brand>
           </LinkContainer>
