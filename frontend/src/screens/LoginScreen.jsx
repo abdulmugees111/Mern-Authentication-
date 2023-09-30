@@ -177,7 +177,7 @@ const LoginScreen = () => {
               <Row className='py-3'>
                
               </Row>
-              <button className="eng-btn">
+              <button className="eng-btn english-btn">
                 <svg
                   width="24"
                   height="24"

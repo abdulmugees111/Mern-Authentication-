@@ -8,6 +8,7 @@ export default defineConfig({
     port: 3001,
     proxy: {
       '/api': {
+        // target:  "https://mern-authentication-qe36atbci-abdulmugees111.vercel.app/",
         target: 'http://localhost:5006',
         changeOrigin: true,
       },
